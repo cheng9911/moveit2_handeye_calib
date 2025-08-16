@@ -1,0 +1,12 @@
+<library path="ign_hardware_plugins">
+  <class
+    name="franka_ign_ros2_control/IgnitionSystem"
+    type="ign_ros2_control::IgnitionSystem"
+    base_class_type="ign_ros2_control::IgnitionSystemInterface">
+    <description>
+      Gazebo joint interface for position, velocity and effort control.
+      The effort interface includes the gravity torques added to the commanded torques.
+      Supporting state interface reading for each joint; position, velocity and effort.
+    </description>
+  </class>
+</library>

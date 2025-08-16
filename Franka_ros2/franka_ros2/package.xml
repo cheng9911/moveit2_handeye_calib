@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>franka_ros2</name>
+  <version>2.0.2</version>
+  <description>Meta package of franka_ros2</description>
+  <maintainer email="support@franka.de">Franka Robotics GmbH</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>franka_bringup</depend>
+  <depend>franka_description</depend>
+  <depend>franka_example_controllers</depend>
+  <depend>franka_fr3_moveit_config</depend>
+  <depend>franka_gazebo_bringup</depend>
+  <depend>franka_ign_ros2_control</depend>
+  <depend>franka_gripper</depend>
+  <depend>franka_hardware</depend>
+  <depend>franka_msgs</depend>
+  <depend>libfranka</depend>
+  
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

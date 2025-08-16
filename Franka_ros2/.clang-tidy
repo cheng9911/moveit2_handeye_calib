@@ -1,0 +1,87 @@
+Checks: -cppcoreguidelines-pro-type-vararg,
+        -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+        clang-diagnostic-*,
+        -clang-diagnostic-deprecated-declarations,
+        -clang-diagnostic-reinterpret-base-class,
+        -clang-diagnostic-return-type,
+        -clang-diagnostic-switch,
+        clang-analyzer-*,
+        -clang-analyzer-optin.cplusplus.VirtualCall,
+        -clang-analyzer-alpha*,
+        google-*,
+        -google-readability-todo,
+        -google-build-using-namespace,
+        -google-explicit-constructor,
+        performance-*,        
+        -performance-unnecessary-value-param,
+        -performance-move-const-arg,
+        misc-*,
+        -readability-*,
+        -readability-function-cognitive-complexity,modernize-*,
+        -modernize-use-trailing-return-type,
+        -modernize-pass-by-value,
+        -bugprone-lambda-function-name
+# These were added as a result of some updates to ros-humble-generate-parameter-library which  causes the generated code in franka_robot_state_broadcaster
+# Namely: build/franka_robot_state_broadcaster/include/franka_robot_state_broadcaster_parameters.hpp
+# Generated via CMake : generate_parameter_library(franka_robot_state_broadcaster_parameters src/franka_robot_state_broadcaster_parameters.yaml)
+# to fail our pre-existing clang-tidy checks
+# This should be investigated.
+        # -google-readability-todo,
+        # -google-build-using-namespace,
+        # -google-explicit-constructor,
+        # -performance-unnecessary-value-param,
+        # -performance-move-const-arg,
+
+HeaderFilterRegex: '^franka_.*'
+CheckOptions:
+# Classes, structs, ...
+  - key:    readability-identifier-naming.NamespaceCase
+    value:  lower_case
+  - key:    readability-identifier-naming.ClassCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.StructCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.EnumCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.UnionCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.TypedefCase
+    value:  CamelCase
+
+# Variables, member variables, ...
+  - key:    readability-identifier-naming.ParameterCase
+    value:  lower_case
+  - key:    readability-identifier-naming.VariableCase
+    value:  lower_case
+  - key:    readability-identifier-naming.MemberCase
+    value:  lower_case
+  - key:    readability-identifier-naming.PublicMemberCase
+    value:  lower_case
+  - key:    readability-identifier-naming.ProtectedMemberCase
+    value:  lower_case
+  - key:    readability-identifier-naming.PrivateMemberCase
+    value:  lower_case
+  - key:    readability-identifier-naming.PrivateMemberSuffix
+    value:  _
+
+# Functions, methods, ...
+  - key:    readability-identifier-naming.FunctionCase
+    value:  camelBack
+  - key:    readability-identifier-naming.MethodCase
+    value:  camelBack
+
+# Constants
+  - key:    readability-identifier-naming.ConstantPrefix
+    value:  k
+  - key:    readability-identifier-naming.ConstantCase
+    value:  CamelCase
+  - key:    readability-identifier-naming.ConstantMemberPrefix
+    value:  ''
+  - key:    readability-identifier-naming.ConstantMemberCase
+    value:  lower_case
+  - key:    readability-identifier-naming.ConstantParameterCase
+    value:  lower_case
+  - key:    readability-identifier-naming.ConstantParameterPrefix
+    value:  ''
+
+
