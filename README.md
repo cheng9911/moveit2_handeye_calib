@@ -1,5 +1,4 @@
 
-````markdown
 # MoveIt2 Hand-Eye Calibration (moveit2_handeye_calib)
 
 基于 **MoveIt2** 的 **通用手眼标定 (Hand-Eye Calibration) 工具**，适配多种 ROS 2 机械臂平台。  
